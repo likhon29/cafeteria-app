@@ -10,8 +10,8 @@ const SearchBox = () => {
         borderWidth: 1,
         borderRadius: 8,
         paddingHorizontal: 10,
-        paddingVertical: 4,
-        marginVertical: 12,
+        
+        marginVertical: 10,
         alignItems:'center'
       }}
     >

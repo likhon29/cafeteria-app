@@ -17,12 +17,10 @@ import CustomSwitch from '../../components/CustomSwitch/CustomSwitch'
 import ListItem from '../../components/ListItem/ListItem'
 import { freeGames, paidGames } from './../../model/data'
 import { AuthContext } from './../../contexts/AuthProvider/AuthProvider'
+import Carousel from '../../components/Carousel/Carousel'
 
 const Home = ({ navigation }) => {
-  const [menuTab, setMenuTab] = useState(1)
-  const onSelectSwitch = (value) => {
-    setMenuTab(value)
-  }
+  
 
   const { user } = useContext(AuthContext)
   console.log(user)
@@ -49,31 +47,11 @@ const Home = ({ navigation }) => {
             />
           </TouchableOpacity>
         </View>
-        <SearchBox></SearchBox>
+        
         <UpcomingHeader></UpcomingHeader>
+        <Carousel></Carousel>
         <ImageContainer></ImageContainer>
-        <CustomSwitch
-          selectionMode={1}
-          option1="Lunch"
-          option2="Snacks & Drinks"
-          onSelectSwitch={onSelectSwitch}
-        ></CustomSwitch>
-        {menuTab == 1 &&
-          paidGames.map((item) => (
-            <ListItem
-              key={item.id}
-              item={item}
-              onPress={() => navigation.navigate('FoodDetail', { item })}
-            ></ListItem>
-          ))}
-        {menuTab == 2 &&
-          freeGames.map((item) => (
-            <ListItem
-              key={item.id}
-              item={item}
-              onPress={() => navigation.navigate('FoodDetail', { item })}
-            ></ListItem>
-          ))}
+        
       </ScrollView>
     </SafeAreaView>
   )

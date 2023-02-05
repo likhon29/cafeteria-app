@@ -6,10 +6,12 @@ import SettingsScreen from './../screens/SettingsScreen/SettingsScreen'
 import MenuScreen from './../screens/MenuScreen/MenuScreen'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import Feather from 'react-native-vector-icons/Feather'
+import FontAwesome from 'react-native-vector-icons/FontAwesome'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import FoodDetailScreen from './../screens/FoodDetailScreen/FoodDetailScreen'
 import { getFocusedRouteNameFromRoute } from '@react-navigation/native'
+import Reservation from './../screens/ReservationScreen/Reservation';
 const Tab = createBottomTabNavigator()
 const Stack = createNativeStackNavigator()
 
@@ -64,6 +66,16 @@ const TabNavigator = () => {
               size={size}
               color={color}
             />
+          ),
+        }}
+      />
+    
+      <Tab.Screen
+        name="Reservation"
+        component={Reservation}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <FontAwesome name="calendar-check-o" size={size} color={color} />
           ),
         }}
       />
