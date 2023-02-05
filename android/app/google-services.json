@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "615011427209",
+    "project_id": "ju-cafe",
+    "storage_bucket": "ju-cafe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:615011427209:android:d2aa09973b9970bc91f758",
+        "android_client_info": {
+          "package_name": "com.jucafe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "615011427209-kb2rfq5i3hmqpn2a1ggjrcgnnseip7bc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jucafe",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "615011427209-oi67c0tjp7qmmgq61fdm4e4eg0594gvp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfwKzHUTqdFuqVqH0UM7aceh6uNwBte7M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "615011427209-oi67c0tjp7qmmgq61fdm4e4eg0594gvp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
