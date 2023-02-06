@@ -18,10 +18,15 @@ import ListItem from '../../components/ListItem/ListItem'
 import { freeGames, paidGames } from './../../model/data'
 import { AuthContext } from './../../contexts/AuthProvider/AuthProvider'
 import Carousel from '../../components/Carousel/Carousel'
+import AboutScreen from '../AboutScreen/AboutScreen'
 
 const Home = ({ navigation }) => {
-  
-
+  const images = [
+    require('../../assets/cafe3.jpg'),
+    require('../../assets/jut.webp'),
+    require('../../assets/cafw2.jpg'),
+    require('../../assets/18303685.jpg'),
+  ]
   const { user } = useContext(AuthContext)
   console.log(user)
   return (
@@ -47,11 +52,13 @@ const Home = ({ navigation }) => {
             />
           </TouchableOpacity>
         </View>
-        
-        <UpcomingHeader></UpcomingHeader>
-        <Carousel></Carousel>
-        <ImageContainer></ImageContainer>
-        
+
+        {/* <UpcomingHeader></UpcomingHeader> */}
+        <Carousel images={images}></Carousel>
+        <View>
+          <Text style={{textAlign: 'center',fontSize:25,color:'black',fontWeight:'bold',marginVertical:10}}>About Cafeteria</Text>
+          <AboutScreen></AboutScreen>
+        </View>
       </ScrollView>
     </SafeAreaView>
   )

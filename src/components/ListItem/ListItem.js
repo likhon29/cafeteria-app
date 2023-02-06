@@ -11,7 +11,7 @@ import { Overlay } from '@rneui/themed'
 import { Icon } from '@rneui/base'
 
 const ListItem = ({ item, onPress }) => {
-  const { title, subtitle, poster } = item
+  const { title, subtitle, poster ,price,quantity } = item
   const [visible, setVisible] = useState(false)
 
   const toggleOverlay = () => {
@@ -60,7 +60,7 @@ const ListItem = ({ item, onPress }) => {
                 fontWeight: 'bold',
               }}
             >
-              {title.length > 10 ? title.substring(0, 10) + '...' : title}
+              {title.length > 15 ? title.substring(0, 15) + '..' : title}
             </Text>
             <Text style={{ color: '#333' }}>
               {subtitle.length > 15
@@ -72,9 +72,9 @@ const ListItem = ({ item, onPress }) => {
             <Text
               style={{ color: '#F96613', fontSize: 18, fontWeight: 'bold' }}
             >
-              12Tk
+             {price}Tk
             </Text>
-            <Text style={{ color: '#333' }}>10 items</Text>
+            <Text style={{ color: '#333' }}>{quantity} items</Text>
           </View>
         </View>
 

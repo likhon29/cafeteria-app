@@ -1,14 +1,8 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { SliderBox } from 'react-native-image-slider-box'
-const Carousel = () => {
-  const images = [
-    require('../../assets/18303685.jpg'),
-    require('../../assets/abc.jpg'),
-    require('../../assets/gujarat.jpeg'),
-    require('../../assets/1-kathiyawadi-restaurants-1-ki1aq.jpg'),
-    
-  ]
+const Carousel = ({images}) => {
+ 
   return (
     <View>
       <SliderBox
